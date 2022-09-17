@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { AppsService } from '../apps.service';
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.css']
 })
-export class TopBarComponent {
 
+export class TopBarComponent implements OnInit {
+  ex1Description = '';
+  
+  constructor( private appsService : AppsService  ) { }
+
+  ngOnInit(): void {
+    this.ex1Description = this.appsService.getEx1Desctiption();
+  }
 }
 
 

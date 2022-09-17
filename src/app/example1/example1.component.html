@@ -1,0 +1,56 @@
+<p>example1 works!</p>
+
+<div [ngStyle]="currentStyles">
+    This div is initially italic, normal weight, and extra large (24px).
+</div>
+
+<h3 id="ngModel">NgModel (two-way) Binding</h3>
+
+<fieldset><h4>NgModel examples</h4>
+    <p>Current item name: {{currentItem.name}}</p>
+    <p>
+      <label for="without">without NgModel:</label>
+      <input [value]="currentItem.name" (input)="currentItem.name=getValue($event)" id="without">
+    </p>
+  
+    <p>
+      <label for="example-ngModel">[(ngModel)]:</label>
+      <input [(ngModel)]="currentItem.name" id="example-ngModel">
+    </p>
+  
+    <p>
+      <label for="example-change">(ngModelChange)="...name=$event":</label>
+      <input [ngModel]="currentItem.name" (ngModelChange)="currentItem.name=$event" id="example-change">
+    </p>
+  
+    <p>
+      <label for="example-uppercase">(ngModelChange)="setUppercaseName($event)"
+        <input [ngModel]="currentItem.name" (ngModelChange)="setUppercaseName($event)" id="example-uppercase">
+      </label>
+    </p>
+  </fieldset>
+
+<hr><h2 id="ngClass">NgClass Binding</h2>
+<p>currentClasses is {{currentClasses | json}}</p>
+<div [ngClass]="currentClasses">This div is initially saveable, unchanged, and special.</div>
+
+<ul>
+    <li>
+      <label for="saveable">saveable</label>
+      <input type="checkbox" [(ngModel)]="canSave" id="saveable">
+    </li>
+    <li>
+      <label for="modified">modified:</label>
+      <input type="checkbox" [value]="!isUnchanged" (change)="isUnchanged=!isUnchanged" id="modified"></li>
+    <li>
+      <label for="special">special: <input type="checkbox" [(ngModel)]="isSpecial" id="special"></label>
+  </li>
+</ul>
+
+<button type="button" (click)="setCurrentClasses()">Refresh currentClasses</button>
+
+<div >
+    This div should be {{ canSave ? "": "not"}} saveable,
+                    {{ isUnchanged ? "unchanged" : "modified" }} and
+                    {{ isSpecial ? "": "not"}} special after clicking "Refresh".</div>
+<hr>

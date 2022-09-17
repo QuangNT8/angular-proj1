@@ -13,7 +13,8 @@ export class CartComponent implements OnInit {
   
   checkoutForm = this.fromBuilder.group({
       name : '',
-      address : ''
+      address : '',
+      phone : ''
   });
 
   constructor(
