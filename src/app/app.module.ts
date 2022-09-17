@@ -14,6 +14,12 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { Example1Component } from './example1/example1.component';
+import { Example2Component } from './example2/example2.component';
+import { AdBannerComponent } from './ad-banner/ad-banner.component';
+import { AdDirective } from './ad.directive';
+import { HeroJobAdComponent } from './hero-job-ad/hero-job-ad.component';
+import { HeroProfileAdComponent } from './hero-profile-ad/hero-profile-ad.component';
+import { AdService } from './ad.service';
 
 @NgModule({
   imports: [
@@ -27,8 +33,10 @@ import { Example1Component } from './example1/example1.component';
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
       { path: 'ex1', component: Example1Component },
+      { path: 'ex2', component: Example2Component },
     ])
   ],
+  providers: [ AdService ],
   declarations: [
     AppComponent,
     TopBarComponent,
@@ -37,7 +45,12 @@ import { Example1Component } from './example1/example1.component';
     ProductDetailsComponent,
     CartComponent,
     ShippingComponent,
-    Example1Component
+    Example1Component,
+    Example2Component,
+    AdBannerComponent,
+    AdDirective,
+    HeroJobAdComponent,
+    HeroProfileAdComponent
   ],
   bootstrap: [
     AppComponent
