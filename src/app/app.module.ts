@@ -35,6 +35,7 @@ import { Example3Component } from './components/example3/example3.component';
       { path: 'shipping', component: ShippingComponent },
       { path: 'ex1', component: Example1Component },
       { path: 'ex2', component: Example2Component },
+      { path: 'ex3', component: Example3Component },
     ])
   ],
   providers: [ AdService ],
