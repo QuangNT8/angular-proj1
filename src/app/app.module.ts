@@ -21,6 +21,8 @@ import { HeroJobAdComponent } from './components/hero-job-ad/hero-job-ad.compone
 import { HeroProfileAdComponent } from './components/hero-profile-ad/hero-profile-ad.component';
 import { AdService } from './services/ad.service';
 import { Example3Component } from './components/example3/example3.component';
+import { Sub1example3Component } from './components/example3/sub1example3/sub1example3.component';
+import { Sub1example3Directive } from './components/example3/sub1example3.directive';
 
 @NgModule({
   imports: [
@@ -54,6 +56,8 @@ import { Example3Component } from './components/example3/example3.component';
     HeroJobAdComponent,
     HeroProfileAdComponent,
     Example3Component,
+    Sub1example3Component,
+    Sub1example3Directive,
   ],
   bootstrap: [
     AppComponent

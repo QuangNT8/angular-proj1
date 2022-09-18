@@ -1,1 +1,16 @@
-<p>example3 works!</p>
+<hr /><div class="parent">
+    <h2>Peek-A-Boo</h2>
+
+    <button type="button" (click)="toggleChild()">
+      {{hasChild ? 'Destroy' : 'Create'}} PeekABooComponent
+    </button>
+    
+    <button type="button"  class="more-styles"  (click)="updateHero()" *ngIf="hasChild">{{hasChild? 'hasChild ' :'no hasChild '}}Update Hero</button>
+
+    <div class="info">
+      <app-sub1example3 *ngIf="hasChild" [name]="heroName"></app-sub1example3>
+
+      <h3>Lifecycle Hook Log</h3>
+      <div *ngFor="let msg of hookLog" class="log">{{msg}}</div>
+    </div>
+</div>
