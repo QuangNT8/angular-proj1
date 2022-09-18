@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { AdComponent } from '../ad-banner/ad.component';
+import { AdComponent } from '../ad-banner/ad.component'; 
 
 @Component({
   selector: 'app-hero-job-ad',

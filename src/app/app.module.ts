@@ -7,19 +7,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { CartComponent } from './cart/cart.component';
-import { ShippingComponent } from './shipping/shipping.component';
-import { Example1Component } from './example1/example1.component';
-import { Example2Component } from './example2/example2.component';
-import { AdBannerComponent } from './ad-banner/ad-banner.component';
-import { AdDirective } from './ad.directive';
-import { HeroJobAdComponent } from './hero-job-ad/hero-job-ad.component';
-import { HeroProfileAdComponent } from './hero-profile-ad/hero-profile-ad.component';
-import { AdService } from './ad.service';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductAlertsComponent } from './components/product-alerts/product-alerts.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { CartComponent } from './components/cart/cart.component';
+import { ShippingComponent } from './components/shipping/shipping.component';
+import { Example1Component } from './components/example1/example1.component';
+import { Example2Component } from './components/example2/example2.component';
+import { AdBannerComponent } from './components/ad-banner/ad-banner.component';
+import { AdDirective } from './controllers/ad.directive';
+import { HeroJobAdComponent } from './components/hero-job-ad/hero-job-ad.component';
+import { HeroProfileAdComponent } from './components/hero-profile-ad/hero-profile-ad.component';
+import { AdService } from './services/ad.service';
+import { Example3Component } from './components/example3/example3.component';
 
 @NgModule({
   imports: [
@@ -50,7 +51,8 @@ import { AdService } from './ad.service';
     AdBannerComponent,
     AdDirective,
     HeroJobAdComponent,
-    HeroProfileAdComponent
+    HeroProfileAdComponent,
+    Example3Component,
   ],
   bootstrap: [
     AppComponent

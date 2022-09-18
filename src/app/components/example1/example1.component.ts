@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { Item } from '../item';
+import { Item } from 'src/app/models/item'; 
 
 @Component({
   selector: 'app-example1',
